@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+
+    <link href="{% static 'appmyweb/base.css' %}" rel="stylesheet">
+
+</head>
+<body>
+
+    <div>                   <!-- Navegador -->
+        <div class="encabezado"> <!--Titulo-->
+            Muebles MAPE
+        </div>
+        <ul>
+        <!--   <li><a class="active" href="default.html">Inicio</a></li>    --> 
+            <li><a href="{% url 'Home' %}">Inicio</a></li>
+            <li><a href="{% url 'Tienda' %}">Tienda</a></li>
+            <li><a href="{% url 'Servicios' %}">Servicios</a></li>
+            <li><a href="{% url 'Contacto' %}">Contactenos</a></li>
+        </ul>
+    </div>
+
+                            <!--  Contenido cambiante  -->
+    {% block content %}
+
+
+    {% endblock %}
+
+    <div>                   <!-- Terminos y condiciones -->
+        <ul class="terminos">       
+            <a>Terminos y condiciones 1</a>
+        </ul>
+    </div>
+
+</body>
+</html>

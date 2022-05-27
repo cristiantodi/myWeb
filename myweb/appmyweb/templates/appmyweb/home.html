@@ -1,14 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-</head>
-<body>
-    
-    <P1>HOME</P1>
+{% extends "appmyweb/base.html" %}
 
-</body>
-</html>
+{% load static %}
+
+{% block content %}
+
+    <div class="imagenes">                 <!-- Secuencia de imagenes --> 
+      <ul>
+        <li><img src="{% static 'appmyweb/imagen/img1.jpg' %}" alt=""></li>
+        <li><img src="{% static 'appmyweb/imagen/img2.jpg' %}" alt=""></li>
+        <li><img src="{% static 'appmyweb/imagen/img3.jpg' %}" alt=""></li>
+        <li><img src="{% static 'appmyweb/imagen/img1.jpg' %}" alt=""></li>
+      </ul>
+    </div>
+
+    <div class="prueba">    <!--Imagenes productos--> 
+        <div class="img">
+            <!--<a target="_blank" href="{% static 'appmyweb/imagen/imgm1.jpg' %}">  -->
+            <img src="{% static 'appmyweb/imagen/im1.jpg' %}" alt="Trolltunga Norway" width="20%" height="20%">
+            <!--</a>-->
+            <div class="desc">Añadir texto</div>
+        </div>
+
+        <div class="img">
+            <!--<a target="_blank" href="imagen/im2.jpg">  -->
+            <img src="{% static 'appmyweb/imagen/im2.jpg' %}" alt="Trolltunga Norway" width="20%" height="20%">
+            <!--</a>-->
+            <div class="desc">Añadir texto</div>
+        </div>
+
+        <div class="img">
+            <!--<a target="_blank" href="imagen/im3.jpg">  -->
+            <img src="{% static 'appmyweb/imagen/im3.jpg' %}" alt="Trolltunga Norway" width="20%" height="20%">
+            <!--</a>-->
+            <div class="desc">Añadir texto</div>
+        </div>
+
+        <div class="img">
+            <!--<a target="_blank" href="imagen/im4.jpg">  -->
+            <img src="{% static 'appmyweb/imagen/im4.jpg' %}" alt="Trolltunga Norway" width="20%" height="20%">
+            <!--</a>-->
+            <div class="desc">Añadir texto</div>
+        </div>
+    </div> 
+
+{% endblock %}
