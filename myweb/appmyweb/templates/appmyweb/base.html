@@ -16,13 +16,13 @@
         <div class="encabezado"> <!--Titulo-->
             Muebles MAPE
         </div>
-        <ul>
-        <!--   <li><a class="active" href="default.html">Inicio</a></li>    --> 
-            <li><a href="{% url 'Home' %}">Inicio</a></li>
-            <li><a href="{% url 'Tienda' %}">Tienda</a></li>
-            <li><a href="{% url 'Servicios' %}">Servicios</a></li>
-            <li><a href="{% url 'Contacto' %}">Contactenos</a></li>
-        </ul>
+            <ul>
+        <!--    <li {% if request.path == '/' %}active{% endif %} ><a href="{% url 'Home' %}">Inicio</a></li>  --> 
+                <li  class="{% if request.path == '/' %} active {% endif %}"><a href="{% url 'Home' %}">Inicio</a></li> 
+                <li  class="{% if request.path == '/tienda' %} active {% endif %}"><a href="{% url 'Tienda' %}">Tienda</a></li>
+                <li  class="{% if request.path == '/servicios' %} active {% endif %}"><a href="{% url 'Servicios' %}">Servicios</a></li>
+                <li  class="{% if request.path == '/contacto' %} active {% endif %}"><a href="{% url 'Contacto' %}">Contactenos</a></li>
+            </ul>
     </div>
 
                             <!--  Contenido cambiante  -->
