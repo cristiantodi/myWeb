@@ -21,5 +21,8 @@ from appmyweb import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('appmyweb.urls'),)
+    path('', include('appmyweb.urls')),
+
+    path('servicios/', include('servicios.urls')),
+
 ]
