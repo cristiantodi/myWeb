@@ -3,13 +3,28 @@
 {% load static %}
 
 {% block content %}
-    {% for servicio in servicios %}
-    <div><p>                 <!-- AQUI VA EL CONTENIDO DE LA PAGINA --> 
-        <h2> {{servicio.titulo}} </h2>
-        <p> {{servicio.contenido}} </p>
-        <p> <img src="{{servicio.imagen.url}}"> </p>
-    </p></div> 
+    
+    {% for servicio in servicios %} <!-- INICIO DEL CONTENIDO DE LA PAGINA --> 
+   <!-- <div class="left"></div>
+    <div class="mainleft">
+        {{servicio.titulo}}
+        <p>{{servicio.contenido}} </p>
+    </div>
+    
+    <div class="mainright">
+        <img src="{{servicio.imagen.url}}"><br>
+        <hr class="featurette-divider">             
+    </div> 
+    
+    <div class="right"></div>
+    -->
 
-    {% endfor %}
+    <div class="grid-container">
+        
+        <div>1</div>
+        <div>2</div>
+    </div>
+    
+    {% endfor %}                    <!-- FIN DEL CONTENIDO DE LA PAGINA -->
 
 {% endblock %}
