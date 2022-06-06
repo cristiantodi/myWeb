@@ -13,34 +13,33 @@
       </ul>
     </div>
 
-    <div class="prueba">    <!--Imagenes productos--> 
-        <div class="img">
-            <!--<a target="_blank" href="{% static 'appmyweb/imagen/imgm1.jpg' %}">  -->
-            <img src="{% static 'appmyweb/imagen/im1.jpg' %}" alt="Trolltunga Norway" width="20%" height="20%">
-            <!--</a>-->
-            <div class="desc">Añadir texto</div>
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="{% static 'appmyweb/imagen/im1.jpg' %}" alt="Jane" style="width:100%">
+            <div class="container">
+              <h2>Prueba # 1</h2>
+              <p class="title">Ejemplo # 1</p>
+              <p>Este es un ejemplo # 1</p>
+              <p>mape.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
         </div>
-
-        <div class="img">
-            <!--<a target="_blank" href="imagen/im2.jpg">  -->
-            <img src="{% static 'appmyweb/imagen/im2.jpg' %}" alt="Trolltunga Norway" width="20%" height="20%">
-            <!--</a>-->
-            <div class="desc">Añadir texto</div>
-        </div>
-
-        <div class="img">
-            <!--<a target="_blank" href="imagen/im3.jpg">  -->
-            <img src="{% static 'appmyweb/imagen/im3.jpg' %}" alt="Trolltunga Norway" width="20%" height="20%">
-            <!--</a>-->
-            <div class="desc">Añadir texto</div>
-        </div>
-
-        <div class="img">
-            <!--<a target="_blank" href="imagen/im4.jpg">  -->
-            <img src="{% static 'appmyweb/imagen/im4.jpg' %}" alt="Trolltunga Norway" width="20%" height="20%">
-            <!--</a>-->
-            <div class="desc">Añadir texto</div>
-        </div>
-    </div> 
+<!--
+        <div class="column">
+            <div class="card">
+              <img src="{% static 'appmyweb/imagen/im2.jpg' %}" alt="Jane" style="width:100%">
+              <div class="container">
+                <h2>Prueba # 2</h2>
+                <p class="title">Ejemplo # 2</p>
+                <p>Este es un ejemplo # 2</p>
+                <p>mape.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+-->          
+    </div>
 
 {% endblock %}
