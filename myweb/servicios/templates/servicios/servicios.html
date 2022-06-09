@@ -3,35 +3,23 @@
 {% load static %}
 
 {% block content %}
-    
-    {% for servicio in servicios %} <!-- INICIO DEL CONTENIDO DE LA PAGINA --> 
-   <!-- <div class="left"></div>
-    <div class="mainleft">
-        {{servicio.titulo}}
-        <p>{{servicio.contenido}} </p>
-    </div>
-    
-    <div class="mainright">
-        <img src="{{servicio.imagen.url}}"><br>
-        <hr class="featurette-divider">             
-    </div> 
-    
-    <div class="right"></div>
-    -->
-    
-        <div class="column">
-          <div class="card">
-            <img src="{{servicio.imagen.url}}" alt="Jane" style="width:100%">
-            <div class="container">
-              <h2>{{servicio.titulo}}</h2>
-              <p class="title">{{servicio.contenido}}</p>              
-              <p><button class="button">Contact</button></p>
+
+
+
+    <hr class="featurette-divider">
+    {% for servicio in servicios %}     
+        <div class="container marketing">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">{{servicio.titulo}} <span class="text-muted"></span></h2>
+                    <p class="lead">{{servicio.contenido}}</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice"  src="{{servicio.imagen.url}}"> <!-- 500x500-->               
+                </div>
+            <hr class="featurette-divider">
             </div>
-          </div>
-        </div>    
-    
-    
-    
+        </div>   
     {% endfor %}                    <!-- FIN DEL CONTENIDO DE LA PAGINA -->
 
 {% endblock %}

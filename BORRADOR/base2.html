@@ -1,162 +1,87 @@
-<!DOCTYPE html>
 <html>
-<head>
-<style>
+	<head>
+		<title>Menu Desplegable</title>
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav {
+				width:500px; /*Le establecemos un ancho*/
+				margin:0 auto; /*Centramos automaticamente*/
+			}
 
-
-/*----------------------------------------------------------------------*/
-
-
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-/* Resposive de las imagenes*/
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after{
-  content: "";
-  clear: both;
-  display: table;
-}
-
-row::after{
-  margin: auto;
-
-} 
-
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
-
-.espacio{
-  position: absolute;
-}
-
-/*----------------------------------------------------------------------*/
-
-html {
-  box-sizing: border-box;
-}
-
-body {margin:0;}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #04AA6D;
-}
-
-
-</style>
-</head>
-<body>
-
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
-
-------------------------------------------------------------------------
-
-<h2>Responsive "Meet The Team" Section</h2>
-<p>Resize the browser window to see the effect.</p>
-<br>
-<div class="espacio">
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="container">
-          <h2>Jane Doe</h2>
-          <p class="title">CEO & Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
-          <p><button class="button">Contact</button></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
-        <div class="container">
-          <h2>Mike Ross</h2>
-          <p class="title">Art Director</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
-          <p><button class="button">Contact</button></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<nav> <!-- Aqui estamos iniciando la nueva etiqueta nav -->
+				<ul class="nav">
+					<li><a href="">Servicios</a>
+						<ul>
+							<li><a href="">Submenu1</a></li>
+							<li><a href="">Submenu2</a></li>
+							<li><a href="">Submenu3</a></li>
+							<li><a href="">Submenu4</a>
+								<ul>
+									<li><a href="">Submenu1</a></li>
+									<li><a href="">Submenu2</a></li>
+									<li><a href="">Submenu3</a></li>
+									<li><a href="">Submenu4</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</nav><!-- Aqui estamos cerrando la nueva etiqueta nav -->
+		</div>
+	</body>
 </html>
-
-
