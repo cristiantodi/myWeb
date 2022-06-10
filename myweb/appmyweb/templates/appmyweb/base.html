@@ -15,6 +15,10 @@
 <script src="{% static 'appmyweb/bootstrap.bundle.min.js' %}"></script>
 <!-- Custom styles for this template -->
 <link href="{% static 'appmyweb/carousel.css' %}" rel="stylesheet">
+<link href="{% static 'appmyweb/product.css' %}" rel="stylesheet">
+
+
+
 
     <style>
       .bd-placeholder-img {
@@ -44,7 +48,7 @@
 			}
 			
 			.nav {
-				width:500px; /*Le establecemos un ancho*/
+				width:auto; /*Le establecemos un ancho*/
 				margin:0 auto; /*Centramos automaticamente*/
 			}
 
@@ -79,7 +83,7 @@
 			}
 			
 			.nav li ul li ul {
-				right:-140px;
+				right:-100%;
 				top:0px;
 			}
 
@@ -104,38 +108,36 @@
             <a class="nav-link  {% if request.path == '/' %} active {% endif %}" aria-current="page" href="{% url 'Home'%}">Inicio</a>
           </li>
           
+          
+          <!-------------------------------------------------------------->
+              <ul class="nav">
+                <li>
+                  <a class="nav-link  {% if request.path == '/contacto' %} active {% endif %}" href="{% url 'Tienda'%}">Tienda</a>
+                  <ul>
+                    <li><a href="">Salas</a></li>
+                    <li><a href="">Comedores</a></li>
+                    <li><a href="">Cortinas</a></li>
+                    <li><a href="">Camas</a>
+                      <ul>
+                        <li><a href="">Camita</a></li>
+                        <li><a href="">Camota</a></li>
+                        <li><a href="">Armarios</a></li>
+                        <li><a href="">Otros</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+          <!-------------------------------------------------------------->
+
           <li class="nav-item">
             <a class="nav-link {% if request.path == '/servicios' %} active {% endif %}" href="{% url 'Servicios'%}">Servicios</a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link  {% if request.path == '/contacto' %} active {% endif %}" href="{% url 'Contacto'%}">Contactenos</a>
           </li>
-          
-          <div id="header">
-            <nav> <!-- Aqui estamos iniciando la nueva etiqueta nav -->
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link  {% if request.path == '/tienda' %} active {% endif %}" href="{% url 'Tienda'%}">Tienda</a>            
-                  <ul>
-                    <li><a href="">Cocina</a></li>
-                    <li><a href="">Salas</a></li>
-                    <li><a href="">Comedores</a></li>
-                    <li><a href="">Camas</a>
-                      <ul>
-                        <li><a href="">camita</a></li>
-                        <li><a href="">camota</a></li>
-                        <li><a href="">tendidos</a></li>
-                        <li><a href="">Cortinas</a></li>
-                      </ul>
-                </li>
-                  
-                  </ul>
-                </li>
-                
-              </ul>
-            </nav><!-- Aqui estamos cerrando la nueva etiqueta nav -->
-          </div>
-
+        </ul>
       </div>
     </div>
   </nav>
