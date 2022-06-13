@@ -6,4 +6,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.servicios, name="Servicios"),
+    path('', views.servicios, name="Contacto"),
 ]

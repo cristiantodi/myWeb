@@ -49,7 +49,7 @@
 			
 			.nav {
 				width:auto; /*Le establecemos un ancho*/
-				margin:0 auto; /*Centramos automaticamente*/
+				margin:auto; /*Centramos automaticamente*/
 			}
 
 			.nav > li {
@@ -96,53 +96,40 @@
 </head>
 <body>
     
-<header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'Home'%}">MAPE</a>
+      <a class="navbar-brand" href="{% url 'Home'%}">Muebles de Adolfito</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link  {% if request.path == '/' %} active {% endif %}" aria-current="page" href="{% url 'Home'%}">Inicio</a>
+            <a class="nav-link navbar-brand {% if request.path == '/' %} active {% endif %}" aria-current="page" href="{% url 'Home'%}">Inicio</a>
           </li>
           
           
           <!-------------------------------------------------------------->
-              <ul class="nav">
-                <li>
-                  <a class="nav-link  {% if request.path == '/contacto' %} active {% endif %}" href="{% url 'Tienda'%}">Tienda</a>
-                  <ul>
-                    <li><a href="">Salas</a></li>
-                    <li><a href="">Comedores</a></li>
-                    <li><a href="">Cortinas</a></li>
-                    <li><a href="">Camas</a>
-                      <ul>
-                        <li><a href="">Camita</a></li>
-                        <li><a href="">Camota</a></li>
-                        <li><a href="">Armarios</a></li>
-                        <li><a href="">Otros</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle navbar-brand {% if request.path == '/contacto' %} active {% endif %}" href="{% url 'Tienda'%}" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="#">Salas</a></li>
+              <li><a class="dropdown-item" href="#">Comedor</a></li>
+              <li><a class="dropdown-item" href="#">Camas</a></li>
+            </ul>
           <!-------------------------------------------------------------->
 
           <li class="nav-item">
-            <a class="nav-link {% if request.path == '/servicios' %} active {% endif %}" href="{% url 'Servicios'%}">Servicios</a>
+            <a class="nav-link navbar-brand {% if request.path == '/servicios' %} active {% endif %}" href="{% url 'Servicios'%}">Servicios</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link  {% if request.path == '/contacto' %} active {% endif %}" href="{% url 'Contacto'%}">Contactenos</a>
+            <a class="nav-link navbar-brand {% if request.path == '/contacto' %} active {% endif %}" href="{% url 'Contacto'%}">Contactenos</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-</header>
 
 <!--Contenido Cambiante-->
 {% block content %}

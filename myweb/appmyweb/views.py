@@ -8,5 +8,8 @@ def home(request):
 def tienda(request):
     return render(request,"appmyweb/tienda.html")
 
+def contacto(request):
+    return render(request,"appmyweb/contacto.html")
+
 
 
