@@ -5,7 +5,25 @@
 {% load static %}
 
 
+
 {% block content %}
+<style>
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(211, 211, 211, 0.199);
+  padding: 50px;
+  font-size: 20px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  padding-top: 56.100%; /* 16:9 Aspect Ratio */
+}
+</style>
 <!--------------------------------------------------------------------------------------------------------------
     <br>
     <div><p>                 
@@ -34,24 +52,22 @@
     </div>   
 </div>
 
+<div class="sticky">
+  <div>
+    <h2>Contactanos</h2>
+    <a style="font-size:2vw;">Facebook:   </a><a class="lead" style="font-size:2vw;" href="https://www.facebook.com/mueblesyaccesoriosparaelhogarMAPE/">mueblesyaccesoriosparaelhogarMAPE</a><br>
+    <a style="font-size:2vw;">Whatsapp:   </a><a class="lead" style="font-size:2vw;" href="https://wa.me/+573182051646?text=¡Estoy+interesado!">+573182051646</a><br>
+    <a style="font-size:2vw;">Direccion: Cl. 71 Sur ## 89 b -14, Bogotá </a><br>
+  </div> 
+      <iframe style="position:relative;
+     
+      width: 100%;
+      height: 100%;
+      border: none;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15907.27397617174!2d-74.1994128!3d4.6264496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd2225331cc0488a6!2sMAPE%20Muebles%20Y%20Accesorios%20Para%20El%20Hogar!5e0!3m2!1ses!2sco!4v1655224596957!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+</div>
 
 
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-    </div>
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 py-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-    </div>
-  </div>
 
 
 </body>   
