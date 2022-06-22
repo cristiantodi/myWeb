@@ -7,24 +7,7 @@
 
 {% block content %}
 
-<style>
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: #2196F3;
-        padding: o0px;
-    }
-    .grid-item {
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
 
-    }
-
-   
-    </style>
 
 
 <!--             AQUI VA EL CONTENIDO DE LA PAGINA                  --> 
@@ -83,48 +66,73 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+</div>
 
 <!------------------------FIN CARRUSEL-------------------------------->
 
-<!----------------------------SUB TEMAS------------------------------->
-
-  <div class="row" data-masonry='{"percentPosition": true }'>
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card" style="border-radius:40px 40px;">
-        <a href="http://www.lostejos.com"><img class="bd-placeholder-img rounded-circle" width="220"  height="220"  aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false" href="#" src="{% static 'appmyweb/imagen/comedor1.jpg' %}"></a>
-        <div class="card-body">
-          <h5 class="card-title">Card title that wraps to a new line</h5>
-          <p class="card-text"> This is a longer card with supporting. <a class="btn btn-lg btn-primary" href="#">Ver detalles</a></p>          
-        </div>
-      </div>
+<!----------------------------SUB TEMAS 1-->
+<div class="container">    
+  <div class="row mb-3">
+    <div class="col-4 themed-grid-col; " style="text-align:center ;" >
+      <img class="bd-placeholder-img rounded-circle" style="border: 8px outset;" width="140"  height="140" src="{% static 'appmyweb/imagen/comedor1.jpg' %}">        
+      <h4>Dormitorios</h4>
     </div>
-
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
-        <a href="http://www.lostejos.com"><img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false" href="#" src="{% static 'appmyweb/imagen/comedor1.jpg' %}"></a>
-        <div class="card-body">
-          <h5 class="card-title">Card title that wraps to a new line</h5>
-          <p class="card-text"> This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. <a class="btn btn-lg btn-primary" href="#">Ver detalles</a></p>          
-        </div>
-      </div>
+    <div class="col-4 themed-grid-col; " style="text-align:center ;" >
+      <img class="bd-placeholder-img rounded-circle" style="border: 8px outset;" width="140"  height="140" src="{% static 'appmyweb/imagen/comedor1.jpg' %}">        
+      <h4>Salas</h4>
     </div>
-    
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
-        <a href="http://www.lostejos.com">        <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false" href="#" src="{% static 'appmyweb/imagen/comedor1.jpg' %}"></a>
-        <div class="card-body">
-          <h5 class="card-title">Card title that wraps to a new line</h5>
-          <p class="card-text"> This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. <a class="btn btn-lg btn-primary" href="#">Ver detalles</a></p>          
-        </div>
-      </div>
+    <div class="col-4 themed-grid-col; " style="text-align:center ;" >
+      <img class="bd-placeholder-img rounded-circle" style="border: 8px outset;" width="140"  height="140" src="{% static 'appmyweb/imagen/comedor1.jpg' %}">        
+      <h4>Camas</h4>
     </div>
   </div>
+</div>
 
-  <hr class="my-5">
-<!-------------------------FIN SUB TEMAS------------------------------->    
-    
-    
+<!----------------------------------------------------------------------->
+
+
+    <div style="margin: 10%; width: 85%;">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+              
+        
+      </div>
+    </div>
+
     
     
 

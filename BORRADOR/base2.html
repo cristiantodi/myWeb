@@ -1,40 +1,107 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Cheatsheet · Bootstrap v5.1</title>
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cheatsheet/">
 
-.item1 {
-  grid-row-end: span 3;
-}
-</style>
-</head>
-<body>
+    
 
-<h1>The grid-row-end Property</h1>
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<p>Use the <em>grid-row-end</em> property to specify on which row to stop displaying the item (or how many rows the item will span).</p>
-<p>Item1 will span 3 rows:</p>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-<div class="grid-container">
-  <div class="item1">1</div>
-  <div class="item2">2</div>
-  <div class="item4">4</div>
-  <div class="item6">6</div>
-</div>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
 
-</body>
+    
+    <!-- Custom styles for this template -->
+    <link href="cheatsheet.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    
+<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+  <div class="container-fluid d-flex align-items-center">
+    <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+      <img src="../assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">
+      Cheatsheet
+    </h1>
+    <a href="../examples/cheatsheet-rtl/" class="ms-auto link-light" hreflang="ar">RTL cheatsheet</a>
+  </div>
+</header>
+<aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
+  <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">On this page</h2>
+  <nav class="small" id="toc">
+    <ul class="list-unstyled">
+      <li class="my-2">
+        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+        <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+          <li><a class="d-inline-flex align-items-center rounded" href="#typography">Typography</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#images">Images</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#tables">Tables</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#figures">Figures</a></li>
+        </ul>
+      </li>
+      <li class="my-2">
+        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+        <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+          <li><a class="d-inline-flex align-items-center rounded" href="#overview">Overview</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#disabled-forms">Disabled forms</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#sizing">Sizing</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#input-group">Input group</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#floating-labels">Floating labels</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#validation">Validation</a></li>
+        </ul>
+      </li>
+      <li class="my-2">
+        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+        <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+          <li><a class="d-inline-flex align-items-center rounded" href="#accordion">Accordion</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#alerts">Alerts</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#badge">Badge</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#breadcrumb">Breadcrumb</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#buttons">Buttons</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#button-group">Button group</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#card">Card</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#carousel">Carousel</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#dropdowns">Dropdowns</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#list-group">List group</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#modal">Modal</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#navs">Navs</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#navbar">Navbar</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#pagination">Pagination</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#popovers">Popovers</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#progress">Progress</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#scrollspy">Scrollspy</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#spinners">Spinners</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#toasts">Toasts</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+
+
+
+
+  </body>
 </html>
