@@ -162,17 +162,17 @@
           
           <!-------------------------------------------------------------->
           <li class="nav-item">
-            <a class="nav-link navbar-brand {% if request.path == '/tienda' %} active {% endif %}" href="{% url 'Tienda'%}">Tienda</a>
+            <a class="nav-link navbar-brand {% if request.path == '/tienda/' %} active {% endif %}" href="{% url 'Tienda'%}">Tienda</a>
           </li>
             
           <!-------------------------------------------------------------->
 
           <li class="nav-item">
-            <a class="nav-link navbar-brand {% if request.path == '/servicios' %} active {% endif %}" href="{% url 'Servicios'%}">Servicios</a>
+            <a class="nav-link navbar-brand {% if request.path == '/servicios/' %} active {% endif %}" href="{% url 'Servicios'%}">Servicios</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link navbar-brand {% if request.path == '/contacto' %} active {% endif %}" href="{% url 'Contacto'%}">Contactenos</a>
+            <a class="nav-link navbar-brand {% if request.path == '/contacto/' %} active {% endif %}" href="{% url 'Contacto'%}">Contactenos</a>
           </li>
           
         </ul>

@@ -67,12 +67,7 @@
     </button>
 </div>
 <!------------------------FIN CARRUSEL-------------------------------->
-CATEGORIAS :
-{% for producto in productos %}
-  {% for categoria in producto.categorias.all %}
-    <a href="{% url 'categoria' categoria.id %}"> {{categoria.nombre}}</a>
-  {% endfor %}
-{% endfor %}
+
 <!----------------------------SUB TEMAS 1----------------------------->
 <div class="container">    
   <div class="row" style="width: 100%; margin: auto; text-align: center;">
