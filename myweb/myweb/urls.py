@@ -23,8 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('appmyweb.urls')),
 
-    path('servicios', include('servicios.urls')),
-    path('contacto', include('contacto.urls')),
-    path('tienda', include('tienda.urls')),
+    path('servicios/', include('servicios.urls')),
+    path('contacto/', include('contacto.urls')),
+    path('tienda/', include('tienda.urls')),
 
 ]
