@@ -35,6 +35,7 @@
       <div class="carousel-item">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
         <img src="{% static 'appmyweb/imagen/sala1.jpg' %}">
+        
 
         <div class="container">
           <div class="carousel-caption">
@@ -68,21 +69,38 @@
 </div>
 <!------------------------FIN CARRUSEL-------------------------------->
 CATEGORIAS :
+<div class="container">
+  <div class="row">
+    
 {% for producto in productos %}
   {% for categoria in producto.categorias.all %}
-    <a href="{% url 'categoria' categoria.id %}"> {{categoria.nombre}}</a>
+<!--    <div class="container">    
+      <div class="row" style="width: 100%; margin: auto; text-align: center;">
+        <div class="col" style="text-align:center ;" >
+          <img class="rounded-circle" style="border: 8px outset;width: 60%; max-width: 130px; height: auto;"  src="{{categoria.imagen_categoria.url}}"><br>
+          <a style="font-size: 3vh;"> {{categoria.nombre}}</a>
+        </div>   
+      </div>
+    </div>
+ -->   
+    <div class="col-lg-2 col-4">
+      <img class="bd-placeholder-img rounded-circle" width="140"  height="140" src="{{categoria.imagen_categoria.url}}">
+      <h2>{{categoria.nombre}}</h2>
+      <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>
+    </div>
+  <!--
+        <div class="col-lg-3">
+        <img class="rounded-circle" style="border: 8px outset;width: 60%; max-width: 130px; height: auto;"  src="{{categoria.imagen_categoria.url}}"><br>
+        <a style="font-size: 3vh;" href="{% url 'categoria' categoria.id %}"> {{categoria.nombre}}</a>
+        <p><a class="btn btn-secondary" href="{% url 'categoria' categoria.id %}">Ver detalles &raquo;</a></p>
+      --> 
   {% endfor %}
 {% endfor %}
-<!----------------------------SUB TEMAS 1----------------------------->
-<div class="container">    
-  <div class="row" style="width: 100%; margin: auto; text-align: center;">
-    <div class="col" style="text-align:center ;" >
-      <img class="rounded-circle" style="border: 8px outset;width: 60%; max-width: 130px; height: auto;"  src="{% static 'appmyweb/imagen/comedor1.jpg' %}">        
-      <p style="font-size: 3vh;">Dormitorios1</p>
-    </div>
-    
+          
   </div>
 </div>
+<!----------------------------SUB TEMAS 1----------------------------->
+
 <!----------------------------FIN TEMAS 1------------------------------>
 
 <!-----------------------CCONTENIDO DE PRODUCTOS----------------------->

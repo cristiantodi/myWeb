@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 class Categoria(models.Model):
     nombre=models.CharField(max_length=50)
+    imagen_categoria=models.ImageField(upload_to='categoria', null=True, blank=True)
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now_add=True)
 
