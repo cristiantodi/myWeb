@@ -1,0 +1,23 @@
+{% extends "appmyweb/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="post" action="">
+    {%csrf_token %}
+    
+    <div class="">
+        <div class="modal-dialog" >
+            <div class="modal-content rounded-8 shadow fw-bold mb-0">
+        
+                {{form|crispy}}
+                <button type="submit" class="btn btn-success">Registrar</button>
+                
+            </div>    
+        </div>
+    </div>
+</form>
+{% endblock %}

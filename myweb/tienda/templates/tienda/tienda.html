@@ -92,7 +92,6 @@
   
 <!-----------------------Carrito compras------------------->
   <div style="float: right;">
-    <p>Total={{importe_total_carro}}</p>
     {% include "carro/widget.html" %}
   </div>
 <!-----------------------Fin carrito----------------------->
@@ -106,10 +105,10 @@
         <h7 class="card-tittle">{{producto.nombre}}</h7>
         <p class="card-text">{{producto.precio}}</p>
         <div class="btn-group">
-          <a class="btn btn-sm btn-outline-secondary" href="{% url 'carro:agregar' producto.id %}">Comprar</a>
-          <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-          <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-        </div>
+          <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success" >Comprar</a>
+          <a class="btn btn-sm btn-success" href="{% url 'carro:agregar' producto.id %}" >+</a> 
+          <a class="btn btn-sm btn-success" href="{% url 'carro:restar' producto.id %}" >-</a></br>
+        </div>          
       </div>
          
     </div>

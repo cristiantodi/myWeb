@@ -16,7 +16,10 @@
             {% for key, value in request.session.carro.items %}
                 <tr class="text-center">
                     <td>{{value.nombre}}</td>
-                    <td>{{cantidad}}</td>
+                    <td>{{value.cantidad}}</td>
+                    <td>
+                        {{value.precio}} $
+                    </td>
                 </tr>
             {% endfor %}
         {% else %}
@@ -29,4 +32,10 @@
             </tr>
         {% endif %}
     </tbody>
+
+    <tfoot>
+        <td colspan="3">
+            Total={{importe_total_carro}}
+        </td>
+    </tfoot>
 </table>

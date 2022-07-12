@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'contacto',
     'tienda',
     'carro',
+    'autenticacion',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -109,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-us'
 
 TIME_ZONE = 'UTC'
 
@@ -130,3 +132,6 @@ MEDIA_ROOT= BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CRISPY_TEMPLATE_PACK='bootstrap4'
