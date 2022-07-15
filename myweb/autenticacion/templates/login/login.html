@@ -14,6 +14,15 @@
             <div class="modal-content rounded-8 shadow fw-bold mb-0">
         
                 {{form|crispy}}
+
+                {% if messages %}
+                    {% for mensaje in messages %}
+
+                        <span class="alert alert-{{mensaje.tags}}">{{mensaje}}</span> 
+
+                    {% endfor %}
+                {% endif %}
+                
                 <button type="submit" class="btn btn-success">Login</button>
                 
             </div>    

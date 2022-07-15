@@ -34,8 +34,17 @@
     </tbody>
 
     <tfoot>
-        <td colspan="3">
-            Total={{importe_total_carro}}
-        </td>
+        <tr>
+            <td colspan="3">
+                Total: {{importe_total_carro}}
+            </td>
+        </tr>
+        {% if request.session.carro.items %}
+            <tr>
+                <td colspan="3" style="text-align:center;">
+                    <a href="../pedidos" class="btn btn-success">Comprar</a>
+                </td>
+            </tr>
+        {% endif %}
     </tfoot>
 </table>

@@ -9,8 +9,11 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
+import os
+from django.contrib.messages import constants as mensaje_error 
 
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +46,7 @@ INSTALLED_APPS = [
     'tienda',
     'carro',
     'autenticacion',
+    'pedidos',
     'crispy_forms',
 ]
 
@@ -128,6 +132,14 @@ STATIC_URL = 'static/'
 MEDIA_URL='/media/'
 MEDIA_ROOT= BASE_DIR / 'media'
 
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER="katoleko@gmail.com"
+EMAIL_HOST_PASSWORD="toleko89"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
 
@@ -135,3 +147,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
+
+MESSAGE_TAGS={
+    mensaje_error.DEBUG:'debug',
+    mensaje_error.INFO:'info',
+    mensaje_error.SUCCESS:'success',
+    mensaje_error.WARNING:'warning',
+    mensaje_error.ERROR:'danger',
+}
