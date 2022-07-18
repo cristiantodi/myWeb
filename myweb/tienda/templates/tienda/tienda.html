@@ -91,6 +91,7 @@
 <div class="container">
   
 <!-----------------------Carrito compras------------------->
+<!--  
   <div style="float: right;">
 
     {% if request.user.is_authenticated %}
@@ -106,6 +107,7 @@
     {% endif %}
     
   </div>
+-->
 <!-----------------------Fin carrito----------------------->
 
 <!-----------------------Productos-------------------------->
@@ -114,19 +116,24 @@
     <div class="col-md-3">
       <div class="card" style="width: 100%; margin-top: 3%;">
         <img class="card-img-top" src="{{producto.imagen.url}}">               
-        <h7 class="card-tittle">{{producto.nombre}}</h7>
-        <p class="card-text">{{producto.precio}}</p>
+        <h5 class="card-tittle">{{producto.nombre}}</h5><p class="card-text">{{producto.precio}}</p>
+        
         <div class="btn-group">
           <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success" >Comprar</a>
+          <!--
           <a class="btn btn-sm btn-success" href="{% url 'carro:agregar' producto.id %}" >+</a> 
           <a class="btn btn-sm btn-success" href="{% url 'carro:restar' producto.id %}" >-</a></br>
+          -->
         </div>          
-      </div>
-         
+      </div>        
     </div>
     {% endfor %} 
   </div>
+
+
 </div>
+
+
 
 <hr class="featurette-divider">
 <!--------------------------Fin Productos------------------>
