@@ -37,11 +37,12 @@ class Carro:
 
     def restar_producto(self, producto):
         for key, value in self.carro.items():
-            if key==str(producto.id):
-                value["cantidad"]=value["cantidad"]-1
-                if value["cantidad"]<1:
-                    self.eliminar(producto)
-                break
+                if key==str(producto.id):
+                    value["precio"]=float(value["precio"])-producto.precio
+                    value["cantidad"]=value["cantidad"]-1
+                    if value["cantidad"]<1:
+                        self.eliminar(producto)
+                    break
         self.guardar_carro()
 
     def limpiar_carro(self):

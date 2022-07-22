@@ -11,6 +11,7 @@
 <!--             AQUI VA EL CONTENIDO DE LA PAGINA                  --> 
 
 
+
 <!--------------------------CARRUSEL---------------------------------->
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -75,12 +76,15 @@
   <div class="row" style=" background-color: rgba(197, 195, 195, 0.329); border-radius: 20px;">
     
     {% for producto in productos %}
-      {% for categoria in producto.categorias.all %}
+      {% for categoria in producto.categorias.only %}
+        
         <div class="col-lg-2 col-4">
           <img class="bd-placeholder-img rounded-circle" style="border: 8px double; text-align: center;" width="100"  height="100" src="{{categoria.imagen_categoria.url}}">
           <h2>{{categoria.nombre}}</h2>
         <!-- <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>-->
+        
         </div>
+        
       {% endfor %}
     {% endfor %}
           
@@ -90,47 +94,31 @@
 
 <div class="container">
   
-<!-----------------------Carrito compras------------------->
-<!--  
-  <div style="float: right;">
 
-    {% if request.user.is_authenticated %}
-    
-      {% include "carro/widget.html" %}
-
-    {% else %}
-
-     <di class="alert alert-danger text-center">
-        Porfavor hacer Login
-     </di>
-
-    {% endif %}
-    
-  </div>
--->
-<!-----------------------Fin carrito----------------------->
 
 <!-----------------------Productos-------------------------->
   <div class="row">
     {% for producto in productos %}
     <div class="col-md-3">
       <div class="card" style="width: 100%; margin-top: 3%;">
-        <img class="card-img-top" src="{{producto.imagen.url}}">               
-        <h5 class="card-tittle">{{producto.nombre}}</h5><p class="card-text">{{producto.precio}}</p>
+
+        
+        <img class="single-image card-img-top" href="{{producto.imagen.url}}" title="{{producto.contenido}}" src="{{producto.imagen.url}}"> 
+          
+            
+        <h5 class="card-tittle">{{producto.nombre}}</h5><p class="card-text" style="text-align:right ;">$  {{producto.precio}}</p>
         
         <div class="btn-group">
           <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success" >Comprar</a>
-          <!--
-          <a class="btn btn-sm btn-success" href="{% url 'carro:agregar' producto.id %}" >+</a> 
-          <a class="btn btn-sm btn-success" href="{% url 'carro:restar' producto.id %}" >-</a></br>
-          -->
+
         </div>          
       </div>        
     </div>
+    
+
     {% endfor %} 
+    
   </div>
-
-
 </div>
 
 

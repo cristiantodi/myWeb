@@ -6,20 +6,21 @@
 
 
 
-    <hr class="featurette-divider">
+    
     {% for servicio in servicios %}  <!-- INICO DEL CONTENIDO DE LA PAGINA -->  <!-- DIMENCIONES DE LA IMAGEN 500x500-->
-        <div class="container marketing">
-            <div class="row featurette">
-                <div class="col-md-7">
+        <hr class="featurette-divider">
+        <div class="container marketing" style="width: 100%;">
+            <div class="row featurette"  >
+                <div class="col-md-7" >
                     <h1>{{servicio.titulo}}</h1>
                     <p class="lead">{{servicio.contenido}}</p>
                 </div>
                 <div class="col-md-5">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice"  src="{{servicio.imagen.url}}"> <!-- 500x500-->               
                 </div>
-            <hr class="featurette-divider">
+            
             </div>
         </div>   
     {% endfor %}                    <!-- FIN DEL CONTENIDO DE LA PAGINA -->
-
+    <hr class="featurette-divider">
 {% endblock %}

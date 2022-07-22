@@ -6,15 +6,15 @@
 
 {% block content %}
 
-<form method="post" action="">
+<form method="post">
     {%csrf_token %}
     
-    <div class="">
-        <div class="modal-dialog" >
-            <div class="modal-content rounded-8 shadow fw-bold mb-0">
-        
+    <div class="py-5" style="font-weight: bold;">
+        <div class="modal-dialog" style="border-radius: 20px 20px 5px 5px;">
+          <div class="modal-content" style="background: linear-gradient(rgba(255, 255, 255, 0.219), rgba(49, 49, 49, 0.144)); border-radius: 20px 20px 5px 5px;">
+            <div class=" p-5">
                 {{form|crispy}}
-
+            </div>
                 {% if messages %}
                     {% for mensaje in messages %}
 
@@ -23,10 +23,15 @@
                     {% endfor %}
                 {% endif %}
                 
-                <button type="submit" class="btn btn-success">Login</button>
-                
-            </div>    
+            
+            
+                <button type="submit" class="btn btn-success" style="font-weight: bold; background-color:rgba(2, 2, 2, 0.486)">Login</button>
+            
+            
         </div>
     </div>
+</div>     
+        
+    
 </form>
 {% endblock %}

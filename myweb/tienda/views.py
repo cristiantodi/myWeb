@@ -3,9 +3,14 @@ from tienda.models import Producto, Categoria
 
 # Create your views here.
 
-def tienda(request):
+
+
+def tienda(request):    
     productos=Producto.objects.all()
-    return render(request,'tienda/tienda.html', {'productos': productos})
+    return render(request, "tienda/tienda.html", {"productos":productos})
+
+def compra(request):
+    return render(request,"carro/compra.html")
 
 def categoria(request, categoria_id):
     categoria=Categoria.objects.get(id=categoria_id)

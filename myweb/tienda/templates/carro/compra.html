@@ -1,0 +1,27 @@
+{% extends "appmyweb/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-----------------------Carrito compras------------------->
+  
+  <div>
+
+    {% if request.user.is_authenticated %}
+    
+      {% include "carro/widget.html" %}
+
+    {% else %}
+
+     <di class="alert alert-danger text-center">
+        Por favor hacer Login
+     </di>
+
+    {% endif %}
+    
+  </div>
+
+<!-----------------------Fin carrito----------------------->
+
+{% endblock %}

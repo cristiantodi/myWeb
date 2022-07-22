@@ -29,7 +29,7 @@ class Vregistro(View):
 
 def cerrar_sesion(request):
     logout(request)
-    return redirect('Home')
+    return redirect('Tienda')
 
 def Logear(request):
     if request.method=="POST":
@@ -40,7 +40,7 @@ def Logear(request):
             usuario=authenticate(username=nombreUsuario, password=contra)
             if usuario is not None:
                 login(request, usuario)
-                return redirect('Home')
+                return redirect('Tienda')
             else:
                 messages.error(request, "Usuario no valido")
         else:
