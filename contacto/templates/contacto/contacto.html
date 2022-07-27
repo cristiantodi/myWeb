@@ -7,101 +7,41 @@
 
 
 {% block content %}
-<style>
-.box{
-        padding: 15px;        
-        border: 4px solid #666;
-        margin-bottom: 20px;
-    }
-</style>
-<!--------------------------------------------------------------------------------------------------------------
-    <br>
-    <div><p>                 
-        CONTACTENOS
-        {{miFormulario}}
-        </p>
-    </div> 
-    -----------------------------------------------------------------------------------------------------------> 
-
-
   
-<body>
-<!--
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">       
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        <img src="{% static 'appmyweb/imagen/sala1.jpg' %}">
-        <div class="container">
-            <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            </div>
-        </div>
-        </div>
-    </div>   
-</div>
-
-<div class="sticky">
-  <div>
-    <h2>Contactanos</h2>
-    <a style="font-size:2vw;">Facebook:   </a><a class="lead" style="font-size:2vw;" href="https://www.facebook.com/mueblesyaccesoriosparaelhogarMAPE/">mueblesyaccesoriosparaelhogarMAPE</a><br>
-    <a style="font-size:2vw;">Whatsapp:   </a><a class="lead" style="font-size:2vw;" href="https://wa.me/+573182051646?text=¡Estoy+interesado!">+573182051646</a><br>
-    <a style="font-size:2vw;">Direccion: Cl. 71 Sur ## 89 b -14, Bogotá </a><br>
-  </div> 
-      <iframe style="position:relative;
-     
-      width: 100%;
-      height: 100%;
-      border: none;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15907.27397617174!2d-74.1994128!3d4.6264496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd2225331cc0488a6!2sMAPE%20Muebles%20Y%20Accesorios%20Para%20El%20Hogar!5e0!3m2!1ses!2sco!4v1655224596957!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
-</div>
------------------------------------------------------------------------------------------------------->
-
-<!--  <img src="{% static 'appmyweb/imagen/sala1.jpg' %}" style="width: 100%;">-->
-<!--
-  <div class="container marketing">
-
-     Three columns of text below the carousel 
-    <div class="row">
-      <div class="col-lg-4">
-
-        <h2>Contactanos</h2>
-        <p>Direccion: Cl. 71 Sur ## 89 b -14, Bogotá</p>
-        <p><a class="btn btn-secondary" href="#">Facebook </a>
-        <a class="btn btn-secondary" href="#">Whatsapp </a></p>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15907.27397617174!2d-74.1994128!3d4.6264496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd2225331cc0488a6!2sMAPE%20Muebles%20Y%20Accesorios%20Para%20El%20Hogar!5e0!3m2!1ses!2sco!4v1655311782022!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        
-
-        
-      </div>  
-      
-    </div>  
-  </div>
--->
+<body class="contec-contac">
 
 <div class="m-4">
-  <div class="card" style="width: 100%;">
+  <div class="card" >
       <div class="card-body">
           <h4 class="card-title">Contactanos</h4>
-          <p class="card-text">Here is some example text to make up the card's content. Replace it with your own text anytime.</p>
+          <p class="card-text">El espíritu de MAPE es fresco y creativo y tiene como objetivo 
+            sorprender al mercado con cada una de sus creaciones.
+            Nuestra principal propuesta es el índigo y queremos ser la mejor opción 
+            para quienes quieren ser parte de una moda en constante movimiento y evolución.</p>
       </div>
       <ul class="list-group list-group-flush">
-          <li class="list-group-item">Direccion: Cl. 71 Sur ## 89 b -14, Bogotá</li>          
-          <li class="list-group-item">Tel.: 3182051646</li>
-          <li class="list-group-item">Facebook: mueblesyaccesoriosparaelhogarMAPE</li>
-          <li class="list-group-item">Instagram: @mape_muebles</li>
+          <li class="list-group-item">
+            Direccion: Cl. 71 Sur ## 89 b -14, Bogota
+          </li>          
+          <li class="list-group-item" ><a class="btn btn-secondary what-contac"
+            href="https://wa.me/+573182051646?text=¡Estoy+interesado!">  Whatsapp </a> 3182051646
+          </li>
+          <li class="list-group-item "><a class="btn btn-secondary face-contac"
+            href="https://www.facebook.com/mueblesyaccesoriosparaelhogarMAPE">  Facebook </a> mueblesyaccesoriosparaelhogarMAPE 
+          </li>
+          <li class="list-group-item"><a class="btn btn-secondary inst-contac"
+            href="https://www.instagram.com/mape_muebles">  Instagram </a> @mape_muebles
+          </li>
       </ul>
-      <div class="card-body;" style="text-align:center; margin-top: 10px;">
+      <div class="card-body;">
         <p>
-          <a class="btn btn-secondary" style="background-color:rgba(47, 1, 253, 0.952);" href="https://www.facebook.com/mueblesyaccesoriosparaelhogarMAPE">Facebook </a>
-          <a class="btn btn-secondary" style="background-color:rgb(1, 253, 56);" href="https://wa.me/+573182051646?text=¡Estoy+interesado!">Whatsapp </a>
-          <a class="btn btn-secondary" style="background-color:rgb(253, 1, 198);" href="https://www.instagram.com/mape_muebles">Instagram</a>
         </p>
       </div>
-      <div class="m" style="text-align:center; width: 100%;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8206794574166!2d-74.20163568466529!3d4.626060493586945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e0bcfc5a805%3A0xd2225331cc0488a6!2sMAPE%20Muebles%20Y%20Accesorios%20Para%20El%20Hogar!5e0!3m2!1ses-419!2sco!4v1658173335382!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </div>
+      <div class="map">
+        <div class="border-radio map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8206794574166!2d-74.20163568466529!3d4.626060493586945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e0bcfc5a805%3A0xd2225331cc0488a6!2sMAPE%20Muebles%20Y%20Accesorios%20Para%20El%20Hogar!5e0!3m2!1ses-419!2sco!4v1658173335382!5m2!1ses-419!2sco" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+        </div>
+      </div>
   </div>
 </div>
 </body>   

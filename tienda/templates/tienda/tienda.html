@@ -8,9 +8,6 @@
 {% block content %}
 
 
-<!--             AQUI VA EL CONTENIDO DE LA PAGINA                  --> 
-
-
 
 <!--------------------------CARRUSEL---------------------------------->
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -71,61 +68,27 @@
 <!------------------------FIN CARRUSEL-------------------------------->
 
 
-<!----------------------------SUB Categorias----------------------------->
-<div style="width: 90%; text-align:center; margin: auto; padding-top: -6%;">
-  <div class="row" style=" background-color: rgba(197, 195, 195, 0.329); border-radius: 20px;">
-    
-    {% for producto in productos %}
-      {% for categoria in producto.categorias.only %}
-        
-        <div class="col-lg-2 col-4">
-          <img class="bd-placeholder-img rounded-circle" style="border: 8px double; text-align: center;" width="100"  height="100" src="{{categoria.imagen_categoria.url}}">
-          <h2>{{categoria.nombre}}</h2>
-        <!-- <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>-->
-        
-        </div>
-        
-      {% endfor %}
-    {% endfor %}
-          
-  </div>
-</div>
-<!----------------------------FIN Categorias------------------------------>
 
-<div class="container">
   
-
-
 <!-----------------------Productos-------------------------->
+<div class="container">
   <div class="row">
     {% for producto in productos %}
     <div class="col-md-3">
-      <div class="card" style="width: 100%; margin-top: 3%;">
-
-        
-        <img class="single-image card-img-top" href="{{producto.imagen.url}}" title="{{producto.contenido}}" src="{{producto.imagen.url}}"> 
-          
-            
-        <h5 class="card-tittle">{{producto.nombre}}</h5><p class="card-text" style="text-align:right ;">$  {{producto.precio}}</p>
-        
+      <div class="card margin-produc">
+        <img class="single-image card-img-top" href="{{producto.imagen.url}}" title="{{producto.contenido}}" src="{{producto.imagen.url}}">           
+        <h5 class="card-tittle">{{producto.nombre}}</h5><p class="card-text text-right">$  {{producto.precio}}</p>        
         <div class="btn-group">
           <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success" >Comprar</a>
-
         </div>          
       </div>        
-    </div>
-    
-
-    {% endfor %} 
-    
+    </div>    
+    {% endfor %}     
   </div>
 </div>
 
-
+<!--------------------------Fin Productos------------------>
 
 <hr class="featurette-divider">
-<!--------------------------Fin Productos------------------>
-    
-    
 
 {% endblock %}

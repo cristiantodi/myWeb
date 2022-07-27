@@ -1,0 +1,86 @@
+.letra-login{
+  font-weight: bold; 
+}
+
+.color-letra-raya-widget{
+  color: black;
+}
+
+.border-radio{
+  border-radius: 20px 20px 5px 5px;
+}
+
+.color-registro{
+  background: linear-gradient(rgba(255, 255, 255, 0.219), rgba(49, 49, 49, 0.144)); 
+}
+
+.button-registro{
+  font-weight: bold; 
+  background-color:rgba(2, 2, 2, 0.486)
+}
+
+.word-car-login{
+  color:white; 
+  text-decoration:none;
+}
+
+.word-register{
+  color:white; 
+  text-decoration: none;
+}
+
+.face-contac{
+  background-color:rgba(47, 1, 253, 0.952);
+}
+
+.inst-contac{
+  background-color:rgb(253, 1, 198);
+}
+
+.what-contac{
+  background-color:rgb(1, 253, 56);
+}
+
+.contec-contac{
+  width: 90%; 
+  margin: auto;
+}
+
+.map{
+  text-align:center; 
+  width: 100%;
+  border: 100px;
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+
+.margin-produc{
+  width: 100%; 
+  margin-bottom: 4%;
+  background: rgb(253, 253, 253);
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-white{
+  color:white; 
+  text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+

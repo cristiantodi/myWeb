@@ -9,14 +9,14 @@
 <form method="post" action="">
     {%csrf_token %}
     
-    <div class="py-5">old;
-        <div class="modal-dialog" style="border-radius: 20px 20px 5px 5px;">
-          <div class="modal-content" style="background: linear-gradient(rgba(255, 255, 255, 0.219), rgba(49, 49, 49, 0.144)); border-radius: 20px 20px 5px 5px;">
-                <div class=" p-5" style="font-weight: bold;">
+    <div class="py-5">
+        <div class="modal-dialog border-radio">
+          <div class="modal-content border-radio color-registro">
+                <div class=" p-5 letra-login">
         
                 {{form|crispy}}
                 </div>
-                <button type="submit" class="btn btn-success" style="font-weight: bold; background-color:rgba(2, 2, 2, 0.486) ;">Registrar</button>
+                <button type="submit" class="btn btn-success button-registro">Registrar</button>
             </div>    
         </div>
         
