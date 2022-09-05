@@ -1,0 +1,24 @@
+{% extends "apptienda/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <title>MAPE-Servicios</title> 
+    
+    <hr class="featurette-divider">
+
+    {% for servicio in servicios %} 
+    <div class="container marketing contec-contac">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">{{servicio.titulo}}</h2>
+                <p class="lead">{{servicio.contenido}}</p>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice"  src="{{servicio.imagen.url}}"> <!-- 500x500-->               
+            </div>
+        </div>
+    </div>
+    {% endfor %}                    
+{% endblock %}
