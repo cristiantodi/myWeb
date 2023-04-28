@@ -1,0 +1,59 @@
+{% extends "appmyweb/base.html" %}
+
+
+
+{% load static %}
+
+
+
+{% block content %}
+  
+<body>
+  <br>
+  <div style="margin:2%">
+    <div>
+      <header>
+        <h2 class="card-title">Contactanos</h2>
+      </header>
+      <article>
+        <p>El espíritu de MAPE es fresco y creativo y tiene como objetivo 
+          sorprender al mercado con cada una de sus creaciones. <br>
+          Nuestra principal propuesta es el índigo y queremos ser la mejor opción
+          para quienes quieren ser parte de una moda en constante movimiento y evolución.</p>
+        </article>
+    </div>
+  <div>
+    <div class="enlace">
+      <ul>
+        <li>
+          <a href="https://wa.me/+573116274882?text=¡Estoy+interesado!" target="_blank">
+            <img src="{% static 'appmyweb/imagen/what.png' %}" width="45" height="30"> <a></a>  (+57) 311 6274882 
+          </a> 
+        </li>
+        <li>  
+          <a href="https://www.facebook.com/mueblesyaccesoriosparaelhogarMAPE" target="_blank"> 
+            <img src="{% static 'appmyweb/imagen/face.png' %}" width="45" height="30"> <a>mueblesyaccesoriosparaelhogarMAPE</a>    
+          </a> 
+        </li>
+        <li>
+          <a href="https://www.instagram.com/mape_muebles" target="_blank">
+            <img src="{% static 'appmyweb/imagen/insta.png' %}" width="45" height="30">  @mape_muebles 
+          </a>  
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-map">
+    <div class="map-responsive">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.818464029435!2d-74.20160148466552!3d4.626454943583647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e0bcfc5a805%3A0xd2225331cc0488a6!2sMAPE%20Muebles%20Y%20Accesorios%20Para%20El%20Hogar!5e0!3m2!1ses-419!2sco!4v1678416162043!5m2!1ses-419!2sco" 
+      style="border:0;" allowfullscreen="" loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>  
+  
+
+  </div>
+</body>   
+
+{% endblock %}

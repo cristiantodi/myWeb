@@ -1,0 +1,27 @@
+{% extends "appmyweb/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-----------------------Carrito compras------------------->
+  
+  <div>
+
+    {% if request.user.is_authenticated %}
+    
+      {% include "carro/widget.html" %}
+
+    {% else %}
+          <div class="text-center ">
+            <a class="border-radio letra-porfa  py-5 btn btn-outline-secondary position-login color-button" 
+            href="{% url 'login' %}"> Por favor hacer Login </a>
+          </div>
+      
+    {% endif %}
+    
+  </div>
+
+<!-----------------------Fin carrito----------------------->
+
+{% endblock %}

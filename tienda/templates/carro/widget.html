@@ -1,0 +1,75 @@
+<div class="py-5">
+    <div class="modal-dialog border-radio">
+        <div class="modal-content color-registro border-radio">
+            <div class=" p-5 letra-login">
+
+                <table class="table table-bordered color-letra-raya-widget">
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="text-center">
+                                <h3> Carro compras </h3> 
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Imagen</th>
+                            <th>Cantidad</th>
+                            <th>Suma</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if request.session.carro.items %}
+                            {% for key, value in request.session.carro.items %}
+                                <tr class="text-center">
+                                    <td>{{value.nombre}}</td>
+                                    <td>
+                                    <img src="{{producto.imagen.url}}"> {{value.imagen.url}}
+                                    </td>
+                                    <td>{{value.cantidad}} </td>
+                                    <td>
+
+                                        <a href="{% url 'carro:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
+                                        <a href="{% url 'carro:restar'  value.producto_id %}" class="btn btn-sm btn-success">-</a>
+                                        <br/>
+                    
+                                        $ {{value.precio}} 
+                    
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="4">
+                                    <div class="alert alert-danger text-center">
+                                        Sin productos
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+
+                    <tfoot  class="text-center">
+                        <tr>
+                            <td colspan="1">
+                                Total: 
+                            </td>
+                            <td colspan="3">
+                                 {{importe_total_carro}}
+                            </td>
+                        </tr>
+
+                        {% if request.session.carro.items %}
+                            <tr><td colspan="3">
+
+                                <a href="#" class="btn btn-success">Hacer Pedido</a>
+                                <!-- <a href="/pedidos" class="btn btn-success">Hacer Pedido</a> -->
+
+                            </td></tr>
+                        {% endif %}
+                        
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

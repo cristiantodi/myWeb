@@ -1,0 +1,26 @@
+{% extends "appmyweb/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<hr class="featurette-divider">
+    
+    {% for servicio in servicios %}  <!-- INICO DEL CONTENIDO DE LA PAGINA -->  <!-- DIMENCIONES DE LA IMAGEN 500x500-->
+        <div class="container marketing contec-contac">
+            <div class="row featurette"  >
+                <div class="col-md-7" >
+                    <h1>{{servicio.titulo}}</h1>
+                    {% autoescape off %}
+                        <p>{{servicio.contenido}}</p> 
+                    {% endautoescape %}
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice"  src="{{servicio.imagen.url}}"> <!-- 500x500-->               
+                </div>
+                <hr class="featurette-divider-min">            
+            </div>
+        </div>   
+    {% endfor %}                    <!-- FIN DEL CONTENIDO DE LA PAGINA -->
+<hr class="featurette-divider">
+{% endblock %}

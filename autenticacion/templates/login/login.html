@@ -1,0 +1,29 @@
+{% extends "appmyweb/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="post">
+    {%csrf_token %}
+    
+    <div class="py-5 letra-login">
+        <div class="modal-dialog" >
+            <div class="modal-content color-registro">
+                <div class="p-5">
+                    {{form|crispy}}
+                </div>
+                    {% if messages %}
+                        {% for mensaje in messages %}
+                            <span class="alert alert-{{mensaje.tags}}">{{mensaje}}</span> 
+                        {% endfor %}
+                    {% endif %}
+                <button type="submit" class="btn btn-success button-registro letra-porfa color-button">Login</button>            
+            </div>
+        </div>
+    </div>     
+
+</form>
+{% endblock %}

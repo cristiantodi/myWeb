@@ -1,0 +1,24 @@
+{% extends "appmyweb/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="post" action="">
+    {%csrf_token %}
+    
+    <div class="py-5">
+        <div class="modal-dialog border-radio">
+          <div class="modal-content border-radio color-registro">
+                <div class=" p-5 letra-login">
+                    {{form|crispy}}
+                </div>
+                <button type="submit" class="btn btn-success button-registro letra-porfa color-button">Registrar</button>
+            </div>    
+        </div>
+    </div>
+
+</form>
+{% endblock %}

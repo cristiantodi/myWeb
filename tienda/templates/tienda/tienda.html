@@ -1,0 +1,131 @@
+{% extends "appmyweb/base.html" %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+
+<!--------------------------CARRUSEL---------------------------------->
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%"  height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="{% static 'appmyweb/imagen/dormitorio1.jpg' %}">
+        
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Camas</h1>
+            <p>Texto</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver detalles</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="{% static 'appmyweb/imagen/sala1.jpg' %}">
+        
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Salas</h1>
+            <p>Texto </p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver detalles</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="{% static 'appmyweb/imagen/variado.jpg' %}">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Servicios</h1>
+            <p>Texto</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver detalles</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!------------------------FIN CARRUSEL-------------------------------->
+  
+<!-----------------------Productos-------------------------->
+<!-- <div class="container">
+  <div class="row">
+    {% for producto in productos %}
+    <div class="col-md-3">
+      <div class="card margin-produc">
+        <img class="single-image card-img-top" href="{{producto.imagen.url}}" title="{{producto.contenido}}" src="{{producto.imagen.url}}">           
+        
+        <h5 class="card-tittle">{{producto.nombre}}</h5>
+        <div class="col-md">
+          {% for categoria in producto.categorias.all %}
+            <a class="color-letra-raya-widget" href="{% url 'categoria' categoria.id %}">{{categoria.nombre}}</a>
+          {% endfor %}
+        </div>
+        <p class="card-text text-right">$  {{producto.precio}}</p>        
+        <div class="btn-group">
+          <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success button-registro letra-porfa color-button">Comprar</a>
+        </div>          
+      </div>        
+    </div>    
+    {% endfor %}     
+  </div>
+</div> -->
+
+<!-----------------------Productos-------------------------->
+<section class="main-container">
+  <div class="cards-container">
+    {% for producto in productos %}
+    <div>
+      <div class="product-card">
+        <img class="single-image card-img-top" href="{{producto.imagen.url}}" title="{{producto.contenido}}" src="{{producto.imagen.url}}"> 
+        <div class="parent">
+          <div class="div1">
+            <h5>{{producto.nombre}}</h5> 
+          </div>
+          <div class="div2">  
+            {% for categoria in producto.categorias.all %}
+              <a href="{% url 'categoria' categoria.id %}">{{categoria.nombre}}</a>
+            {% endfor %} 
+          </div>
+          <div class="div3">
+            $  {{producto.precio}} 
+          </div>
+          <div class="div4"> 
+            <figure>
+              <a href="{% url 'carro:agregar' producto.id %}"><img src="{% static 'appmyweb/imagen/car1.png' %}" alt="Pay.car"></a> 
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>    
+    {% endfor %}     
+  </div>
+</section>
+
+<!--------------------------Fin Productos------------------>
+
+<!--------------------------Fin Productos------------------>
+
+<hr class="featurette-divider">
+
+{% endblock %}
